@@ -128,17 +128,44 @@ main > section {
   font-weight: 600;
   margin-top: 5px;
 }
+
+/* sponspor section style */
+.sponspor-description {
+  max-width: 540px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.sponspor-image {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.image-content {
+  filter: grayscale(100%);
+}
+
 /* responsive media query */
 @media screen and (max-width:576px) {
   .navbar, .nav-links, .teams {
     flex-direction: column;
   }
-  .team-image-container {
+  .team-image-container, .facts-container {
     grid-template-columns: repeat(1, 1fr);
     margin: 0 auto;
   }
+  .facts-container {
+    justify-items: center;
+    gap: 24px;
+  }
   .feature {
     margin-left: 15px;
+  }
+  .sponspor-image {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    gap: 24px;
+
   }
 }
 /* media query for medium size device */
@@ -152,5 +179,21 @@ main > section {
   .feature {
     margin: 60px auto;
   }
-  
+  .fact-description {
+    text-align: center;
+    margin: 0 auto 50px;
+  }
+  .section-title {
+    text-align: center;
+  }
+  .facts-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 24px;
+  }
+  .sponspor-image {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 24px;
+  }
 }
